@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NossaMoto Honda - Simulador de Financiamento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .honda-red {
+            background-color: #FF0000;
+        }
+        .honda-red-text {
+            color: #FF0000;
+        }
+        .btn-honda {
+            background-color: #FF0000;
+            color: #FFFFFF;
+            transition: background-color 0.3s ease;
+        }
+        .btn-honda:hover {
+            background-color: #D60000;
+        }
+        .form-input {
+            border-color: #ced4da;
+        }
+        .form-input:focus {
+            border-color: #FF0000;
+            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+            outline: none;
+        }
+        .optional-fields-container {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s ease-in-out;
+        }
+        .optional-fields-container > div {
+            overflow: hidden;
+        }
+        .optional-fields-container.open {
+            grid-template-rows: 1fr;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+</head>
+<body class="antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
